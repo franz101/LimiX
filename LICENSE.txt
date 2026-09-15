@@ -1,13 +1,29 @@
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+                   Stable AI Technology Co., Ltd. License
+                        Version 1.0, September 2026
+
+   Copyright © 2026 Stable AI Technology Co., Ltd.
+   Copyright © 2026 Wen Zhun (Xiong'an) Technology Co., Ltd.
+   Copyright © 2026 稳准智能(雄安)科技有限公司
+
+   The foregoing names identify the same copyright owner and are alternative 
+   Chinese and English names of the same legal entity.
+
+   This License is derived from the Apache License, Version 2.0 ("Apache 2.0"). 
+   Sections 1 through 9 are based on Apache 2.0, with the definition of 
+   "License" in Section 1 modified solely to incorporate the additional 
+   provisions set forth in Section 10.
+
+   Except for the foregoing modification to Section 1 and the additional 
+   provisions in Section 10, Sections 1 through 9 reproduce the terms and 
+   conditions of Apache 2.0.
+
+   https://www.apache.org/licenses/LICENSE-2.0
 
    1. Definitions.
 
       "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
+      and distribution as defined by Sections 1 through 10 of this document.
 
       "Licensor" shall mean the copyright owner or entity authorized by
       the copyright owner that is granting the License.
@@ -173,29 +189,61 @@
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
+   ---------------------- ADDITIONAL PROVISION --------------------------
+
+   10. Additional Attribution and Model Naming Requirements.
+      For the avoidance of doubt, any model weights expressly distributed 
+      by the Licensor under this License shall be deemed part of the "Work" 
+      for purposes of this License, to the extent that any copyright, 
+      patent, or other licensable intellectual property rights subsist in 
+      such model weights.
+
+      If You distribute or make available the Work, any Derivative Work 
+      thereof, or any product or service (including another AI model) 
+      that incorporates, contains, or is based upon any material portion 
+      of the Work or any model weights distributed as part of the Work, 
+      You must:
+
+      (a) provide a copy of this License, or a reasonably accessible 
+      link to this License, in connection with such distribution or making 
+      available; and
+
+      (b) prominently display the following attribution:
+
+      "Built with StableAI LimiX"
+
+      in a reasonably visible location appropriate to the relevant medium, 
+      including, where applicable, on a related website, user interface, 
+      blog post, about page, or product documentation.
+
+      If You use the Work or any model weights distributed as part of the 
+      Work to create, train, fine-tune, distill, or otherwise improve an AI 
+      model, and such AI model is subsequently distributed or made available 
+      to any third party, You must include "LimiX" at the beginning of the 
+      name of such AI model.
+
+      Notwithstanding Section 6 of this License, You are granted a limited, 
+      non-exclusive, non-transferable, royalty-free license to use the name 
+      "LimiX" and the attribution phrase "Built with StableAI LimiX" solely 
+      as necessary to comply with this Section 10. Such use does not grant 
+      You any other rights in or to the Licensor's trademarks, trade names, 
+      logos, or other brand identifiers.
+
+      You shall not use the name "LimiX", the attribution phrase "Built with 
+      StableAI LimiX", or any other identifier of the Licensor in a manner 
+      that suggests or implies endorsement, sponsorship, partnership, 
+      affiliation, or certification by the Licensor, except as expressly 
+      permitted by this License or separately authorized in writing by the 
+      Licensor.
+
+      For purposes of this Section, activities conducted solely for internal 
+      research, evaluation, benchmarking, or testing purposes, without 
+      distributing or making the Work, any Derivative Work, or any resulting 
+      AI model available to a third party, shall not constitute distribution 
+      or making available under this Section and shall not trigger the 
+      attribution or model naming requirements set forth herein.
+
+      The requirements of this Section 10 are additional conditions of the 
+      rights granted under this License.
+
    END OF TERMS AND CONDITIONS
-
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright 2025 StableAI
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.

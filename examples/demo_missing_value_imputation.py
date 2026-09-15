@@ -13,7 +13,6 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 from inference.predictor import LimiXPredictor
 
-
 def mask_prediction_eval(x_pred_:np.ndarray, x_true_:np.ndarray, mask:np.ndarray, categories: dict):
     # There are categorical variables that are not treated as categorical during inference      
     x_pred = x_pred_.copy()
@@ -114,12 +113,17 @@ y_test = np.asarray(y_test, dtype=np.int64)
 categories = get_categorical_features_indices(X_train)
 
 data_device = f'cuda:0'
-model_path = hf_hub_download(repo_id="stableai-org/LimiX-16M", filename="LimiX-16M.ckpt", local_dir="./cache")
+
+model_path = hf_hub_download(repo_id="stableai-org/LimiX-2", filename="LimiX-2.ckpt", local_dir="./cache")
 
 testX, testX_original, nan_mask = gen_nan(X_test, 0.3)
 
-model = LimiXPredictor(device=torch.device(data_device), model_path=model_path, mask_prediction=True, inference_config="./config/reg_default_noretrieval_MVI.json")
-y_pred, reconstructed_X = model.predict(X_train, y_train, X_test, task_type="Regression")
+model = LimiXPredictor(
+    device=torch.device(data_device),
+    model_path=model_path,
+    inference_config=os.path.join(ROOT_DIR, "config", "reg_default_noretrieval_MVI_v2.json"),
+)
+reconstructed_X = model.predict(X_train, y_train, testX, task_type="Feature_imputation")
 mask_prediction_ = reconstructed_X[-X_test.shape[0]:].astype(X_test.dtype)
 
 mask_pred_cls_error, mask_pred_reg_error = mask_prediction_eval(mask_prediction_, testX_original, nan_mask, categories)

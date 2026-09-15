@@ -1,0 +1,24 @@
+include LICENSE.txt
+include README.md
+include README_cn.md
+include infer.py
+include pyproject.toml
+graft inference
+graft model
+graft utils
+graft limix
+graft config
+prune examples
+prune .git
+prune result
+prune .cursor
+prune .pytest_cache
+prune build
+prune dist
+global-exclude *.ckpt
+global-exclude *.cpkt
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.egg-info
+recursive-exclude * __pycache__
+recursive-exclude * *.egg-info
