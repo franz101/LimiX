@@ -175,10 +175,11 @@ RUN set -eux; \
 
 #  pip install -c /tmp/constraints.txt datasets==4.0.0; \
 # flash-attn：预编译 wheel（cu12 + torch2.9 + cxx11abiTRUE + cp312）
-COPY flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl /tmp/flash_attn.whl
+COPY flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl /tmp/
 RUN set -eux; \
-    pip install --force-reinstall --no-deps /tmp/flash_attn.whl; \
-    rm -f /tmp/flash_attn.whl; \
+    pip install --force-reinstall --no-deps \
+        /tmp/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl; \
+    rm -f /tmp/flash_attn-2.8.3+cu12torch2.9cxx11abiTRUE-cp312-cp312-linux_x86_64.whl; \
     python -c "import flash_attn; \
 assert flash_attn.__version__.startswith('2.8.3'), flash_attn.__version__; \
 print('OK_FLASH_ATTN', flash_attn.__version__)"
