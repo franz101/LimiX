@@ -1,4 +1,4 @@
-<div align="center">
+<div align="left">
   <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="95%">
 </div>
 
