@@ -497,10 +497,10 @@ reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Fe
 本仓库中的代码采用 Stable AI Technology Co., Ltd. License, Version 1.0 (2026年9月) 授权，该许可证衍生自 Apache License, Version 2.0：其中第 1–9 节沿用了 Apache 2.0 的条款与条件，仅对第 1 节中“License”（许可证）的定义进行了修改，以便纳入第 10 节（关于署名及模型命名的附加要求）的规定。第三方代码受其各自的许可证及署名要求约束；详情请参阅 [LICENSE.txt](./LICENSE.txt)。模型权重采用单独的许可证授权：第三方代码遵循其各自的许可与署名要求，详见 [LICENSE.txt](./LICENSE.txt)。模型权重单独授权:
 
 - LimiX-2: [非商用许可协议](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)
-- LimiX-2M: [许可协议](https://huggingface.co/stableai-org/LimiX-2M/blob/main/LICENSE.txt)
-- LimiX-16M: [许可协议](https://huggingface.co/stableai-org/LimiX-16M/blob/main/LICENSE.txt)
 - LimiX-1-2M: [许可协议](https://huggingface.co/stableai-org/LimiX-1_2M/blob/main/LICENSE)
 - LimiX-1-16M: [许可协议](https://huggingface.co/stableai-org/LimiX-1_16M/blob/main/LICENSE)
+- LimiX-2M: [许可协议](https://huggingface.co/stableai-org/LimiX-2M/blob/main/LICENSE.txt)
+- LimiX-16M: [许可协议](https://huggingface.co/stableai-org/LimiX-16M/blob/main/LICENSE.txt)
 
 
 ## 📝 引用
