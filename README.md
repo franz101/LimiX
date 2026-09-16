@@ -2,7 +2,7 @@
   <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="105%">
 </div>
 
-## LimiX: A Large Foundation Model for Structured Data (LDM)
+## LimiX: Large Foundation Models for Structured Data (LDMs) 
 [![Project Page](https://img.shields.io/badge/LimiX-Project%20Page-green)](https://www.limix.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
