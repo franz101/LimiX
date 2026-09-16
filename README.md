@@ -37,6 +37,18 @@ LimiX-2 is the new-generation model of the LimiX family, developed through model
   <sub>Synthetic data generation pipeline for pretraining.</sub>
 </div>
 
+## ➤ Available Models
+
+<div align="center">
+
+| Model | Parameters | Release date | Download link | Tasks supported |
+| ----------- | ------------ | ------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
+| LimiX-2 | 400M | 2026-9-16 | [LimiX-2.ckpt](https://huggingface.co/stable-ai/LimiX-2/tree/main) | ✅ cls ✅ reg ✅ imputation |
+| LimiX-1_2M | 2M | 2025-11-10 | [LimiX-1_2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main) | ✅ cls ✅ reg ✅ imputation |
+| LimiX-1_16M | 16M | 2025-8-29 | [LimiX-1_16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ cls ✅ reg ✅ imputation |
+
+</div>
+
 ## ➤ Benchmark Results
 
 ### ➩ Overall Elo
@@ -223,18 +235,6 @@ This installs `LimiX-infer` and makes `from inference.predictor import LimiXPred
 ## ➤ Inference
 
 LimiX supports classification, regression, and missing-value imputation. The public entry point is `inference.predictor.LimiXPredictor`, which routes to `v1_0` / `v2_0` from the checkpoint architecture version. Use a config that matches the model (LimiX-2 / V2.0 uses `*_v2.json`).
-
-### ➩ Model download
-
-<div align="center">
-
-| Model | Release date | Download link | Tasks supported |
-| ----------- | ------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
-| LimiX-2 | 2026-9-16 | [LimiX-2.ckpt](https://huggingface.co/stable-ai/LimiX-2/tree/main) | ✅ cls ✅ reg ✅ imputation |
-| LimiX-1_2M | 2025-11-10 | [LimiX-1_2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main) | ✅ cls ✅ reg ✅ imputation |
-| LimiX-1_16M | 2025-8-29 | [LimiX-1_16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ cls ✅ reg ✅ imputation |
-
-</div>
 
 ### ➩ Command-line: `LimiX-infer`
 
