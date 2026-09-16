@@ -3,7 +3,7 @@
 </div>
 
 ## LimiX: Large Foundation Models for Structured Data (LDMs) 
-[![preprint](https://img.shields.io/static/v1?label=LimiX-2-Paper&message=2609.17488v1&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2609.17488v1)
+[![preprint](https://img.shields.io/static/v1?label=LimiX-2-Paper&message=2609.17488&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2609.17488)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-2M-Paper&message=2606.04485&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2606.04485)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-Paper&message=2509.03505&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2509.03505)
 [![Project Page](https://img.shields.io/badge/LimiX-Project%20Page-green)](https://www.limix.ai/)
@@ -23,7 +23,7 @@
 
 ## 🚀 News
 
-- **[16 Sept 2026] 🚀 LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, please check [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
+- **[16 Sept 2026] 🚀 LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, please check the [arxiv archive](https://arxiv.org/abs/2609.17488) or [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
 - **[4 June 2026] 🧠 Follow-up LimiX research accepted by ICML!**
   Paper: [LimiX-2M](https://arxiv.org/abs/2606.04485). This work extends the original [LimiX](https://arxiv.org/abs/2509.03505) structured-data foundation model. 
 - **[10 Nov 2025] 🚀 LimiX-2M lightweight model officially released!**
