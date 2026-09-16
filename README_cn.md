@@ -1,5 +1,5 @@
 <div align="left">
-  <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="95%">
+  <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="105%">
 </div>
 
 ## LimiX：面向结构化数据的大型基础模型（LDM）
@@ -9,19 +9,28 @@
 [![ModelScope](https://img.shields.io/badge/ModelScope-stable--ai-f58c20)](https://modelscope.cn/organization/stable-ai/)
 [![许可证](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
-## :boom: 更新动态
+<div align="left" style="line-height: 1;">
+  📔 <a href="README.md" target="_blank">English</a>
+  &nbsp;|
+  中文
+  &nbsp;
+</div>
 
-- **[2026.09.16] LimiX-2 开源发布。** LimiX-2 权重（[`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)）与推理代码随本仓库一同发布。单个预训练模型在一次前向传播中即可完成分类、回归、缺失值插补，无需任务专属的参数更新。使用需遵循 [非商用许可协议](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)。LimiX-2 技术报告正式发布，详见 [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)。
-- **[2026.06.04] LimiX 后续延伸研究成果被 ICML 会议录用！**
+<br/>
+
+## :🚀 更新动态
+
+- **[2026.09.16] 🚀 LimiX-2 开源发布。** LimiX-2 权重（[`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)）与推理代码随本仓库一同发布。单个预训练模型在一次前向传播中即可完成分类、回归、缺失值插补，无需任务专属的参数更新。使用需遵循 [非商用许可协议](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)。LimiX-2 技术报告正式发布，详见 [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)。
+- **[2026.06.04] 🧠 LimiX 后续延伸研究成果被 ICML 会议录用！**
   论文：[arXiv:2606.04485](https://arxiv.org/pdf/2606.04485)，该工作是初代LimiX（arXiv:2509.03505）结构化数据基础模型的拓展研究。[![arXiv-2606.04485](https://img.shields.io/badge/arXiv-2606.04485-b31b1b)](https://arxiv.org/pdf/2606.04485)
-- **[2025.11.10] LimiX-2M 轻量化模型正式发布！**
+- **[2025.11.10] 🚀 LimiX-2M 轻量化模型正式发布！**
   相较LimiX-16M版本，该轻量模型大幅降低GPU显存占用、提升推理速度；同时优化检索机制，在缩减推理耗时与内存开销的前提下进一步提升模型效果。
-- **[2025.09.03] LimiX 论文于arXiv上线发布**
+- **[2025.09.03] 🧠 LimiX 论文于arXiv上线发布**
   原论文：[arXiv:2509.03505](https://arxiv.org/abs/2509.03505)，LimiX是面向通用智能的首款结构化数据大模型，项目基于Apache 2.0协议开源。
-- **[2025.08.29] LimiX V1.0 正式发布**
+- **[2025.08.29] 🚀 LimiX V1.0 正式发布**
   LimiX结构化数据基础模型首个稳定官方版本开源上线。
 
-## ➤ LimiX-2 模型架构与预训练数据
+## ✨ LimiX-2 模型架构与预训练数据
 LimiX-2 是 LimiX 家族中的新一代模型，它是基于我们此前确立的缩放定律（scaling laws），通过模型与数据规模扩展而开发的。LimiX-2 采用了上下文机制网络（CMN）范式，并利用上下文条件掩码建模（CCMM）进行预训练。CMN 将上下文学习（in-context learning）的组织原则从以目标为中心的预测，转变为以机制为导向的联合建模。该模型并非围绕传统表格型 PFN（先验拟合网络）中常见的  `p(y | x, D_context)` 目标进行构建，而是致力于学习 `p(x, y | D_context)`——即一种表征数据生成背后联合结构的、依赖于上下文的表示。预训练阶段使用了由结构因果模型（SCM）生成的合成数据集，这些数据集涵盖了多种图结构、函数机制及观测过程。在 TabArena、TALENT 和 BCCO 上的评估结果表明，LimiX-2 的表现优于现有的特定数据集模型及表格数据基础模型。除了预测性能外，CMN 范式还赋予了 LimiX-2 因果感知能力：其特征注意力机制能够编码直接因果关系，从而实现对因果骨架（causal skeleton）的精确恢复。
 
 <div align="center">
@@ -36,7 +45,21 @@ LimiX-2 是 LimiX 家族中的新一代模型，它是基于我们此前确立�
   <sub>预训练合成数据生成流程</sub>
 </div>
 
-## ➤ Benchmark 结果
+### ➩ 模型下载
+
+<div align="center">
+
+| 模型       |  参数量    | 发布日期    | 下载链接                                                                      | 支持的任务                                             |
+| ---------- | ----------- | ----------- | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
+| LimiX-2    | 400M  ｜ 2026-9-16   | [LimiX-2.ckpt](https://huggingface.co/stable-ai/LimiX-2/tree/main)         | ✅ 分类 ✅ 回归 ✅ 缺失值插补 |
+| LimiX-1_2M | 2M  ｜ 2025-11-10  | [LimiX-1_2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main)   | ✅ 分类 ✅ 回归 ✅ 缺失值插补 |
+| LimiX-1_16M| 16M  ｜ 2025-8-29   | [LimiX-1_16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ 分类 ✅ 回归 ✅ 缺失值插补 |
+
+</div>
+
+<br/>
+
+## 📈 Benchmark 结果
 
 ### ➩ 总体 Elo
 
@@ -81,7 +104,7 @@ LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模�
 </div>
 
 <div align="center">
-  <img src="./doc/figures/fig4_tabarena_elo.png" alt="图 4：TabArena 基准性能" width="76%">
+  <img src="./doc/figures/fig4_tabarena_elo.png" alt="图 4：TabArena 基准性能" width="100%">
   <br>
   <sub>TabArena 基准性能。
   基线涵盖默认、调优与调优+集成三类配置；LimiX-2 在默认配置下即取得 1935 Elo，优于所有对比基础模型，并超过 4 小时非商业配置的 AutoGluon。</sub>
@@ -189,6 +212,8 @@ LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模�
   <sub>BCCO 分类与回归的参数缩放曲线</sub>
 </div>
 
+<br/>
+
 ## ➤ 使用教程
 
 ### ➩ 安装
@@ -220,21 +245,11 @@ python -m pip install -e .
 
 该命令会安装 `LimiX-infer` 命令行入口，并使 `from inference.predictor import LimiXPredictor` / `from limix import LimiXPredictor` 在任意工作目录下均可导入。若步骤 1 中已安装 `torch==2.9.1`，此处会直接复用该构建。
 
+<br/>
+
 ## ➤ 推理
 
 LimiX 支持分类、回归与缺失值插补。统一的推理入口为 `inference.predictor.LimiXPredictor`，它会根据 checkpoint 的架构版本路由到 `v1_0` / `v2_0`。请使用与模型匹配的配置（LimiX-2 / V2.0 使用 `*_v2.json`）。
-
-### ➩ 模型下载
-
-<div align="center">
-
-| 模型       | 发布日期    | 下载链接                                                                      | 支持的任务                                             |
-| ---------- | ----------- | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
-| LimiX-2    | 2026-9-16   | [LimiX-2.ckpt](https://huggingface.co/stable-ai/LimiX-2/tree/main)         | ✅ 分类 ✅ 回归 ✅ 缺失值插补 |
-| LimiX-1_2M | 2025-11-10  | [LimiX-1_2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main)   | ✅ 分类 ✅ 回归 ✅ 缺失值插补 |
-| LimiX-1_16M| 2025-8-29   | [LimiX-1_16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ 分类 ✅ 回归 ✅ 缺失值插补 |
-
-</div>
 
 ### ➩ 命令行：`LimiX-infer`
 
@@ -477,7 +492,7 @@ reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Fe
 - Balance Comprehensive Challenging Omni-domain 分类基准：[BCCO_cls](https://huggingface.co/datasets/stable-ai/bcco_cls)
 - Balance Comprehensive Challenging Omni-domain 回归基准：[BCCO_reg](https://huggingface.co/datasets/stable-ai/bcco_reg)
 
-## ➤ 许可证
+## 📃 许可证
 
 本仓库中的代码采用 Stable AI Technology Co., Ltd. License, Version 1.0 (2026年9月) 授权，该许可证衍生自 Apache License, Version 2.0：其中第 1–9 节沿用了 Apache 2.0 的条款与条件，仅对第 1 节中“License”（许可证）的定义进行了修改，以便纳入第 10 节（关于署名及模型命名的附加要求）的规定。第三方代码受其各自的许可证及署名要求约束；详情请参阅 [LICENSE.txt](./LICENSE.txt)。模型权重采用单独的许可证授权：第三方代码遵循其各自的许可与署名要求，详见 [LICENSE.txt](./LICENSE.txt)。模型权重单独授权:
 
@@ -488,7 +503,7 @@ reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Fe
 - LimiX-1-16M: [许可协议](https://huggingface.co/stableai-org/LimiX-1_16M/blob/main/LICENSE)
 
 
-## ➤ 引用
+## 📝 引用
 ```
 @article{zhang2025limix,
   title={Limix: Unleashing structured-data modeling capability for generalist intelligence},
