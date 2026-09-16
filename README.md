@@ -44,7 +44,7 @@ LimiX-2 is the new-generation model of the LimiX family, developed through model
 LimiX-2 achieves the highest Elo rating on all three benchmarks, outperforming all compared foundation models and AutoGluon 1.6.
 
 <div align="center">
-  <img src="./doc/figures/fig1_performance_overview.png" alt="Figure 1: Performance overview on evaluated benchmarks" width="76%">
+  <img src="./doc/figures/fig1_performance_overview.png" alt="Figure 1: Performance overview on evaluated benchmarks" width="95%">
   <br>
   <sub>Performance overview on evaluated benchmarks.</sub>
 </div>
