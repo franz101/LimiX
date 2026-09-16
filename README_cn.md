@@ -3,6 +3,7 @@
 </div>
 
 ## LimiX：面向结构化数据的大型基础模型（LDM）
+[![preprint](https://img.shields.io/static/v1?label=LimiX-2-技术报告&message=2609.17488&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2609.17488)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-2M-论文&message=2606.04485&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2606.04485)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-技术报告&message=2509.03505&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2509.03505)
 [![项目主页](https://img.shields.io/badge/LimiX-项目主页-green)](https://www.limix.ai/)
@@ -22,7 +23,7 @@
 
 ## :🚀 更新动态
 
-- **[2026.09.16] 🚀 LimiX-2 开源发布。** LimiX-2 权重（[`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)）与推理代码随本仓库一同发布。单个预训练模型在一次前向传播中即可完成分类、回归、缺失值插补，无需任务专属的参数更新。使用需遵循 [非商用许可协议](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)。LimiX-2 技术报告正式发布，详见 [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)。
+- **[2026.09.16] 🚀 LimiX-2 开源发布。** LimiX-2 权重（[`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)）与推理代码随本仓库一同发布。单个预训练模型在一次前向传播中即可完成分类、回归、缺失值插补，无需任务专属的参数更新。使用需遵循 [非商用许可协议](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)。LimiX-2 技术报告正式发布，详见 [arxiv archive](https://arxiv.org/abs/2609.17488)[arxiv archive](https://arxiv.org/abs/2609.17488) 或 [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)。
 - **[2026.06.04] 🧠 LimiX 后续延伸研究成果被 ICML 会议录用！**
   论文：[LimiX-2M](https://arxiv.org/abs/2606.04485)，该工作是初代 [LimiX](https://arxiv.org/abs/2509.03505) 结构化数据基础模型的拓展研究。
 - **[2025.11.10] 🚀 LimiX-2M 轻量化模型正式发布！**
