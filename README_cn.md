@@ -3,14 +3,11 @@
 </div>
 
 # LimiX-2：面向结构化数据的大基础模型（LDM）
-
-LimiX-2 是 LimiX 家族中的新一代模型，它是基于我们此前确立的缩放定律（scaling laws），通过模型与数据规模扩展而开发的。LimiX-2 采用了上下文机制网络（CMN）范式，并利用上下文条件掩码建模（CCMM）进行预训练。CMN 将上下文学习（in-context learning）的组织原则从以目标为中心的预测，转变为以机制为导向的联合建模。该模型并非围绕传统表格型 PFN（先验拟合网络）中常见的  `p(y | x, D_context)` 目标进行构建，而是致力于学习 `p(x, y | D_context)`——即一种表征数据生成背后联合结构的、依赖于上下文的表示。预训练阶段使用了由结构因果模型（SCM）生成的合成数据集，这些数据集涵盖了多种图结构、函数机制及观测过程。在 TabArena、TALENT 和 BCCO 上的评估结果表明，LimiX-2 的表现优于现有的特定数据集模型及表格数据基础模型。除了预测性能外，CMN 范式还赋予了 LimiX-2 因果感知能力：其特征注意力机制能够编码直接因果关系，从而实现对因果骨架（causal skeleton）的精确恢复。
-
 [![项目主页](https://img.shields.io/badge/LimiX-项目主页-green)](https://www.limix.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
 [![ModelScope](https://img.shields.io/badge/ModelScope-stable--ai-f58c20)](https://modelscope.cn/organization/stable-ai/)
-[![许可证](https://img.shields.io/badge/License-Non--Commercial%20v1.0-red)](./LICENSE.txt)
+[![许可证](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
 # 更新动态 :boom:
 
@@ -25,6 +22,7 @@ LimiX-2 是 LimiX 家族中的新一代模型，它是基于我们此前确立�
   LimiX结构化数据基础模型首个稳定官方版本开源上线。
 
 # ➤ LimiX-2 模型架构与预训练数据
+LimiX-2 是 LimiX 家族中的新一代模型，它是基于我们此前确立的缩放定律（scaling laws），通过模型与数据规模扩展而开发的。LimiX-2 采用了上下文机制网络（CMN）范式，并利用上下文条件掩码建模（CCMM）进行预训练。CMN 将上下文学习（in-context learning）的组织原则从以目标为中心的预测，转变为以机制为导向的联合建模。该模型并非围绕传统表格型 PFN（先验拟合网络）中常见的  `p(y | x, D_context)` 目标进行构建，而是致力于学习 `p(x, y | D_context)`——即一种表征数据生成背后联合结构的、依赖于上下文的表示。预训练阶段使用了由结构因果模型（SCM）生成的合成数据集，这些数据集涵盖了多种图结构、函数机制及观测过程。在 TabArena、TALENT 和 BCCO 上的评估结果表明，LimiX-2 的表现优于现有的特定数据集模型及表格数据基础模型。除了预测性能外，CMN 范式还赋予了 LimiX-2 因果感知能力：其特征注意力机制能够编码直接因果关系，从而实现对因果骨架（causal skeleton）的精确恢复。
 
 <div align="center">
   <img src="./doc/figures/fig2_architecture.png" alt="图 2：LimiX-2 整体结构" width="68%">
@@ -472,28 +470,30 @@ reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Fe
 
 # ➤ 相关链接
 
-- LimiX:Unleashing Structured-Data Modeling Capability for Generalist Intelligence: [LimiX:Unleashing Structured-Data Modeling Capability for Generalist Intelligence](https://arxiv.org/abs/2509.03505)
+- LimiX:Unleashing Structured-Data Modeling Capability for Generalist Intelligence: [Arxiv](https://arxiv.org/abs/2509.03505)
 - LimiX 技术报告：[LimiX_Technical_Report.pdf](https://github.com/limix-ldm/LimiX/blob/main/LimiX_Technical_Report.pdf)
 - LimiX-2 技术报告：[LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)
 - LimiX 详细使用说明：[访问 Limix 官方文档](https://www.limix.ai/doc/)
-- Balance Comprehensive Challenging Omni-domain 分类基准：[bcco_cls](https://huggingface.co/datasets/stable-ai/bcco_cls)
-- Balance Comprehensive Challenging Omni-domain 回归基准：[bcco_reg](https://huggingface.co/datasets/stable-ai/bcco_reg)
+- Balance Comprehensive Challenging Omni-domain 分类基准：[BCCO_cls](https://huggingface.co/datasets/stable-ai/bcco_cls)
+- Balance Comprehensive Challenging Omni-domain 回归基准：[BCCO_reg](https://huggingface.co/datasets/stable-ai/bcco_reg)
 
 # ➤ 许可证
 
-本仓库的模型及相关材料（权重、参数、checkpoint、架构实现、推理 / 微调 / 评测代码、配置文件、文档、嵌入与表征，以及任何微调、LoRA、提示微调、重训或蒸馏所得的衍生模型）均依照 [LICENSE.txt](./LICENSE.txt) —— **StableAI LimiX 非商业许可 v1.0（StableAI LimiX Non-Commercial License Version 1.0，2026 年 9 月）** 授权。该许可为**自定义非商业模型许可，并非开源许可，不授予任何商业使用权**。
+本仓库中的代码采用 Stable AI Technology Co., Ltd. License, Version 1.0 (2026年9月) 授权，该许可证衍生自 Apache License, Version 2.0：其中第 1–9 节沿用了 Apache 2.0 的条款与条件，仅对第 1 节中“License”（许可证）的定义进行了修改，以便纳入第 10 节（关于署名及模型命名的附加要求）的规定。第三方代码受其各自的许可证及署名要求约束；详情请参阅 [LICENSE.txt](./LICENSE.txt)。模型权重采用单独的许可证授权：第三方代码遵循其各自的许可与署名要求，详见 [LICENSE.txt](./LICENSE.txt)。模型权重单独授权:
 
-- 当你分发或提供本作品（Work）、其任何衍生作品，或包含本作品及其模型权重的任何实质部分的产品与服务（包括其他 AI 模型）时，必须：(a) 随附本许可副本或可合理访问的链接；(b) 在与媒介相适应的显著位置（如相关网站、用户界面、博客、关于页面或产品文档）展示 **"Built with StableAI LimiX"**。
-- 若你使用本作品或其模型权重创建、训练、微调、蒸馏或以其他方式改进一个 AI 模型，且该模型随后被分发或提供给任何第三方，则该模型名称必须以 **"LimiX"** 开头。
-- 仅用于内部研究、评测、基准测试，且未向第三方分发或提供本作品、衍生作品或由此产生的 AI 模型的，不构成分发或提供，不触发上述署名与模型命名要求。
-- 为免歧义，许可方明确以本许可分发的模型权重，在其存在可许可的知识产权（著作权、专利等）的范围内，视为本"作品"的一部分。
+- LimiX-2: [非商用许可协议](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)
+- LimiX-2M: [许可协议](https://huggingface.co/stableai-org/LimiX-2M/blob/main/LICENSE.txt)
+- LimiX-16M: [许可协议](https://huggingface.co/stableai-org/LimiX-16M/blob/main/LICENSE.txt)
+- LimiX-1-2M: [许可协议](https://huggingface.co/stableai-org/LimiX-1_2M/blob/main/LICENSE)
+- LimiX-1-16M: [许可协议](https://huggingface.co/stableai-org/LimiX-1_16M/blob/main/LICENSE)
 
-第三方代码遵循其各自的许可与署名要求，详见 [LICENSE.txt](./LICENSE.txt)。
 
-模型权重单独授权。
-
-- LimiX-2：[许可协议](https://huggingface.co/stable-ai/LimiX-2/blob/main/LICENSE)
-- LimiX-2M：[许可协议](https://huggingface.co/stable-ai/LimiX-2M/blob/main/LICENSE.txt)
-- LimiX-16M：[许可协议](https://huggingface.co/stable-ai/LimiX-16M/blob/main/LICENSE.txt)
-- LimiX-1_2M：[许可协议](https://huggingface.co/stable-ai/LimiX-1_2M/blob/main/LICENSE)
-- LimiX-1_16M：[许可协议](https://huggingface.co/stable-ai/LimiX-1_16M/blob/main/LICENSE)
+# ➤ 引用
+```
+@article{zhang2025limix,
+  title={Limix: Unleashing structured-data modeling capability for generalist intelligence},
+  author={Zhang, Xingxuan and Ren, Gang and Yu, Han and Yuan, Hao and Wang, Hui and Li, Jiansheng and Wu, Jiayun and Mo, Lang and Mao, Li and Hao, Mingchao and others},
+  journal={arXiv preprint arXiv:2509.03505},
+  year={2025}
+}
+```
