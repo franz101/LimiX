@@ -2,7 +2,7 @@
   <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="105%">
 </div>
 
-## LimiX: Large Foundation Models for Structured Data (LDMs) 
+# LimiX: Large Foundation Models for Structured Data (LDMs) 
 [![preprint](https://img.shields.io/static/v1?label=LimiX-2-Paper&message=2609.17488&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2609.17488)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-2M-Paper&message=2606.04485&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2606.04485)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-Paper&message=2509.03505&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2509.03505)
