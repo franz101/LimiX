@@ -9,7 +9,7 @@
 [![ModelScope](https://img.shields.io/badge/ModelScope-stable--ai-f58c20)](https://modelscope.cn/organization/stable-ai/)
 [![License](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
-<div align="center" style="line-height: 1;">
+<div align="left" style="line-height: 1;">
   📔 English
   &nbsp;|
   <a href="README_cn.md" target="_blank">中文</a>
