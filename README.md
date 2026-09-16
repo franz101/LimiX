@@ -3,7 +3,7 @@
 </div>
 
 ## LimiX: Large Foundation Models for Structured Data (LDMs) 
-[![LimiX-2M](https://img.shields.io/badge/LimiX-2M-b31b1b)](https://arxiv.org/pdf/2606.04485)
+[![LimiX-2M](https://img.shields.io/badge/LimiX--2M-b31b1b)](https://arxiv.org/pdf/2606.04485)
 [![LimiX](https://img.shields.io/badge/LimiX-b31b1b)](https://arxiv.org/pdf/2509.03505)
 [![Project Page](https://img.shields.io/badge/LimiX-Project%20Page-green)](https://www.limix.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
