@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="89%">
+  <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="95%">
 </div>
 
 # LimiX-2: A Large Foundation Model for Structured Data (LDM)
