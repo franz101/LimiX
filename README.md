@@ -3,6 +3,11 @@
 </div>
 
 ## LimiX-2: A Large Foundation Model for Structured Data (LDM)
+[![Project Page](https://img.shields.io/badge/LimiX-Project%20Page-green)](https://www.limix.ai/)
+[![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
+[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
+[![ModelScope](https://img.shields.io/badge/ModelScope-stable--ai-f58c20)](https://modelscope.cn/organization/stable-ai/)
+[![License](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
 <div align="center" style="line-height: 1;">
   <a href="README_cn.md" target="_blank">中文</a>
@@ -12,12 +17,6 @@
 </div>
 
 <br/>
-
-[![Project Page](https://img.shields.io/badge/LimiX-Project%20Page-green)](https://www.limix.ai/)
-[![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
-[![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
-[![ModelScope](https://img.shields.io/badge/ModelScope-stable--ai-f58c20)](https://modelscope.cn/organization/stable-ai/)
-[![License](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
 ## 🚀 News
 
