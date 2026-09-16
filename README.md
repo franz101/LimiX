@@ -49,7 +49,7 @@ LimiX-2 is the new-generation model of the LimiX family, developed through model
 
 </div>
 
-## ➤ Benchmark Results
+## 📈 Benchmark Results
 
 ### ➩ Overall Elo
 
