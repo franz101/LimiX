@@ -2,7 +2,7 @@
   <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="95%">
 </div>
 
-## LimiX-2：面向结构化数据的基础模型（LDM）
+## LimiX：面向结构化数据的大型基础模型（LDM）
 [![项目主页](https://img.shields.io/badge/LimiX-项目主页-green)](https://www.limix.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
