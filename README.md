@@ -2,16 +2,7 @@
   <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="105%">
 </div>
 
-<h3 align="center">
-  <b>
-    <span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
-    <br/>
-    LimiX-2: A Large Foundation Model for Structured Data (LDM)
-    <br/>
-    <span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
-    <br/>
-  </b>
-</h3>
+## LimiX-2: A Large Foundation Model for Structured Data (LDM)
 
 <div align="center" style="line-height: 1;">
   <a href="README_cn.md" target="_blank">中文</a>
