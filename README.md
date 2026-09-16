@@ -3,6 +3,7 @@
 </div>
 
 ## LimiX: Large Foundation Models for Structured Data (LDMs) 
+[![preprint](https://img.shields.io/static/v1?label=LimiX-2-Paper&message=2609.17488v1&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2609.17488v1)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-2M-Paper&message=2606.04485&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2606.04485)
 [![preprint](https://img.shields.io/static/v1?label=LimiX-Paper&message=2509.03505&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2509.03505)
 [![Project Page](https://img.shields.io/badge/LimiX-Project%20Page-green)](https://www.limix.ai/)
@@ -506,6 +507,23 @@ The code in this repository is licensed under the [Stable AI Technology Co., Ltd
 
 ## 📝 Citation
 ```
+@misc{zhang2026limix2contextualmechanismnetwork,
+      title={LimiX-2: A Contextual Mechanism Network Towards General Structured-Data Intelligence}, 
+      author={Xingxuan Zhang and Gang Ren and Hao Yuan and Hao Zou and Hongze Tan and Hui Wang and Jianhao Song and Jiansheng Li and Jiayao Zhang and Jinghan Zhang and Kaifang Li and Lang Mo and Li Mao and Mingchao Hao and Nuo Xu and Rui Ding and Ruiji Zhang and Shuyang Li and Siyu Mei and Tianyang Zhang and Weiyang Mu and Yancheng Dong and Yongxian Wei and Yuan Xue and Yuanrui Wang and Yue He and Zijia Yang and Ziyun Li and Dongzhe Li and Fuqiang Wang and Jiandong Liu and Jiawei Chen and Jiaxin Du and Kaijie Cheng and Kehan Li and Lei Sun and Linjun Zhou and Ningbo Dai and Qi Wang and Renzhe Xu and Shaoxing Du and Shumeng Yang and Wang Lu and Wenjing Chu and Xiannan Huang and Xiaoyu Lin and Xing Ai and Xinyan Han and Xuanyue Li and Xuanyue Su and Xukun Zhang and Yan Lu and Yaxin Zhang and Yi Qin and Yifei Huang and Yihan Xu and Yongle Lv and Yuanyuan Jiang and Yushan Han and Peng Cui},
+      year={2026},
+      eprint={2609.17488},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2609.17488}, 
+}
+
+@article{wang2026limix,
+  title={LimiX-2M: Mitigating Low-Rank Collapse and Attention Bottlenecks in Tabular Foundation Models},
+  author={Wang, Yuanrui and Zhang, Xingxuan and Yu, Han and Hao, Mingchao and Ren, Gang and Yuan, Hao and Mao, Li and Zhang, Yunjia and Yuan, Chun and Cui, Peng},
+  journal={arXiv preprint arXiv:2606.04485},
+  year={2026}
+}
+
 @article{zhang2025limix,
   title={Limix: Unleashing structured-data modeling capability for generalist intelligence},
   author={Zhang, Xingxuan and Ren, Gang and Yu, Han and Yuan, Hao and Wang, Hui and Li, Jiansheng and Wu, Jiayun and Mo, Lang and Mao, Li and Hao, Mingchao and others},
