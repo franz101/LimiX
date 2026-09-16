@@ -1,15 +1,15 @@
-<div align="center">
-  <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="89%">
+<div align="left">
+  <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="95%">
 </div>
 
-# LimiX-2：面向结构化数据的大基础模型（LDM）
+## LimiX-2：面向结构化数据的大基础模型（LDM）
 [![项目主页](https://img.shields.io/badge/LimiX-项目主页-green)](https://www.limix.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
 [![ModelScope](https://img.shields.io/badge/ModelScope-stable--ai-f58c20)](https://modelscope.cn/organization/stable-ai/)
 [![许可证](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
-# 更新动态 :boom:
+## :boom: 更新动态
 
 - **[2026.09.16] LimiX-2 开源发布。** LimiX-2 权重（[`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)）与推理代码随本仓库一同发布。单个预训练模型在一次前向传播中即可完成分类、回归、缺失值插补，无需任务专属的参数更新。使用需遵循 [LICENSE.txt](./LICENSE.txt)。LimiX-2 技术报告正式发布，详见 [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)。
 - **[2026.06.04] LimiX 后续延伸研究成果被 ICML 会议录用！**
@@ -21,34 +21,34 @@
 - **[2025.08.29] LimiX V1.0 正式发布**
   LimiX结构化数据基础模型首个稳定官方版本开源上线。
 
-# ➤ LimiX-2 模型架构与预训练数据
+## ➤ LimiX-2 模型架构与预训练数据
 LimiX-2 是 LimiX 家族中的新一代模型，它是基于我们此前确立的缩放定律（scaling laws），通过模型与数据规模扩展而开发的。LimiX-2 采用了上下文机制网络（CMN）范式，并利用上下文条件掩码建模（CCMM）进行预训练。CMN 将上下文学习（in-context learning）的组织原则从以目标为中心的预测，转变为以机制为导向的联合建模。该模型并非围绕传统表格型 PFN（先验拟合网络）中常见的  `p(y | x, D_context)` 目标进行构建，而是致力于学习 `p(x, y | D_context)`——即一种表征数据生成背后联合结构的、依赖于上下文的表示。预训练阶段使用了由结构因果模型（SCM）生成的合成数据集，这些数据集涵盖了多种图结构、函数机制及观测过程。在 TabArena、TALENT 和 BCCO 上的评估结果表明，LimiX-2 的表现优于现有的特定数据集模型及表格数据基础模型。除了预测性能外，CMN 范式还赋予了 LimiX-2 因果感知能力：其特征注意力机制能够编码直接因果关系，从而实现对因果骨架（causal skeleton）的精确恢复。
 
 <div align="center">
-  <img src="./doc/figures/fig2_architecture.png" alt="图 2：LimiX-2 整体结构" width="68%">
+  <img src="./doc/figures/fig2_architecture.png" alt="图 2：LimiX-2 整体结构" width="80%">
   <br>
   <sub>LimiX-2 模型架构</sub>
 </div>
 
 <div align="center">
-  <img src="./doc/figures/fig3_data_generation.png" alt="图 3：预训练合成数据生成流程" width="64%">
+  <img src="./doc/figures/fig3_data_generation.png" alt="图 3：预训练合成数据生成流程" width="80%">
   <br>
   <sub>预训练合成数据生成流程</sub>
 </div>
 
-# ➤ Benchmark 结果
+## ➤ Benchmark 结果
 
-## ➩ 总体 Elo
+### ➩ 总体 Elo
 
 LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模型与 AutoGluon 1.6。
 
 <div align="center">
-  <img src="./doc/figures/fig1_performance_overview.png" alt="图 1：各基准性能总览" width="76%">
+  <img src="./doc/figures/fig1_performance_overview.png" alt="图 1：各基准性能总览" width="105%">
   <br>
   <sub>各基准性能总览</sub>
 </div>
 
-## ➩ TabArena
+### ➩ TabArena
 
 在完整的 TabArena 基准上，LimiX-2 在全部四项预测指标上均排名第一，取得 **1935** 的 Elo（取整前高出第二名 TabFM+ 117.4 分）、**3.3%** 的可改进度（improvability）、**5.5** 的平均排名与 **18.9** 的聚合胜场（约为 TabFM+ 的 3.6 倍）。
 
@@ -93,7 +93,7 @@ LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模�
   <sub>TabArena 成对胜率</sub>
 </div>
 
-## ➩ TALENT
+### ➩ TALENT
 
 在 TALENT 上，LimiX-2 在全部五个评测类别中均取得最高 Elo，总体 Elo 为 **1506**（高出 TabFM 35 分），可改进度为 **6.75%**，聚合胜场为 **84.3**（约为 TabFM 的 1.7 倍）。
 
@@ -124,7 +124,7 @@ LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模�
   <sub>TALENT 成对胜率</sub>
 </div>
 
-## ➩ BCCO
+### ➩ BCCO
 
 在 BCCO 上，LimiX-2 总体排名第一，Elo 为 **1432**（分别高出 AutoGluon 1.6 (EX, 4h)、TabFM、LimiX-16M 达 56 / 63 / 202 分），可改进度为 **6.97%**，聚合胜场为 **50.4**（约为 TabFM 的 3.0 倍）。
 
@@ -155,7 +155,7 @@ LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模�
   <sub>BCCO 成对胜率</sub>
 </div>
 
-## ➩ 缩放定律
+### ➩ 缩放定律
 
 缩放研究评测了 LimiX-2 从 12.5M 到 406.2M 参数的配置，并将拟合的对数线性趋势外推至十亿参数量级。在全部五个评测序列上，下游性能均随模型规模呈清晰的对数线性趋势。
 
@@ -189,13 +189,13 @@ LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模�
   <sub>BCCO 分类与回归的参数缩放曲线</sub>
 </div>
 
-# ➤ 使用教程
+## ➤ 使用教程
 
-## ➩ 安装
+### ➩ 安装
 
 需要 Python >= 3.12，其余 Python 依赖通过 `pip install -e .` 安装（包含 `torch==2.9.1`）。`torch` / `flash-attn` 需与本机 CUDA 版本匹配，可在步骤 1（可选）中先行安装。
 
-### 步骤 1（可选）：安装 PyTorch 与 flash-attn
+#### 步骤 1（可选）：安装 PyTorch 与 flash-attn
 
 推荐版本（见 `constraints.txt`）：`torch==2.9.1`、`torchvision==0.24.1`、`torchaudio==2.9.1`。请从 [pytorch.org](https://pytorch.org) 安装与 CUDA 匹配的构建，例如：
 
@@ -210,7 +210,7 @@ wget -O flash_attn.whl https://github.com/Dao-AILab/flash-attention/releases/dow
 pip install flash_attn.whl
 ```
 
-### 步骤 2：以可编辑模式安装
+#### 步骤 2：以可编辑模式安装
 
 ```bash
 git clone https://github.com/limix-ldm-ai/LimiX.git
@@ -220,11 +220,11 @@ python -m pip install -e .
 
 该命令会安装 `LimiX-infer` 命令行入口，并使 `from inference.predictor import LimiXPredictor` / `from limix import LimiXPredictor` 在任意工作目录下均可导入。若步骤 1 中已安装 `torch==2.9.1`，此处会直接复用该构建。
 
-# ➤ 推理
+## ➤ 推理
 
 LimiX 支持分类、回归与缺失值插补。统一的推理入口为 `inference.predictor.LimiXPredictor`，它会根据 checkpoint 的架构版本路由到 `v1_0` / `v2_0`。请使用与模型匹配的配置（LimiX-2 / V2.0 使用 `*_v2.json`）。
 
-## ➩ 模型下载
+### ➩ 模型下载
 
 <div align="center">
 
@@ -236,7 +236,7 @@ LimiX 支持分类、回归与缺失值插补。统一的推理入口为 `infere
 
 </div>
 
-## ➩ 命令行：`LimiX-infer`
+### ➩ 命令行：`LimiX-infer`
 
 执行 `pip install -e .` 后，`LimiX-infer` 与 `python infer.py` 是同一入口。必填参数：`--task_type`、`--data_dir`、`--model_path`。若未指定 `--inference_config_path`，将按任务类型与 checkpoint 版本选择内置的默认配置（V2.0 使用 `*_v2.json`）。
 
@@ -281,9 +281,9 @@ LimiX-infer --task_type Feature_imputation --data_dir /path/to/mvi_data --model_
 
 </div>
 
-## ➩ 接口说明
+### ➩ 接口说明
 
-### 模型创建
+#### 模型创建
 
 ```python
 from inference.predictor import LimiXPredictor
@@ -321,7 +321,7 @@ class LimiXPredictor:
 
 </div>
 
-### 预测
+#### 预测
 
 ```python
 def predict(self,
@@ -350,7 +350,7 @@ def predict(self,
 - 回归：预测值，形状 `(n_query,)`（V2.0 直接返回原始目标尺度，无需手动反归一化）
 - 缺失值插补：插补后的特征矩阵
 
-## ➩ 推理配置文件
+### ➩ 推理配置文件
 
 <div align="center">
 
@@ -367,7 +367,7 @@ def predict(self,
 
 </div>
 
-## ➩ 分类
+### ➩ 分类
 
 ```python
 from sklearn.datasets import load_breast_cancer
@@ -406,7 +406,7 @@ print("accuracy_score:", accuracy_score(y_test, np.argmax(prediction, axis=1)))
 
 完整示例见 [examples/demo_classification.py](./examples/demo_classification.py)
 
-## ➩ 回归
+### ➩ 回归
 
 ```python
 from functools import partial
@@ -455,7 +455,7 @@ print(f"R2: {r2}")
 
 完整示例见 [examples/demo_regression.py](./examples/demo_regression.py)
 
-## ➩ 缺失值插补
+### ➩ 缺失值插补
 
 ```python
 model = LimiXPredictor(
@@ -468,7 +468,7 @@ reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Fe
 
 完整示例见 [examples/demo_missing_value_imputation.py](./examples/demo_missing_value_imputation.py)
 
-# ➤ 相关链接
+## ➤ 相关链接
 
 - LimiX:Unleashing Structured-Data Modeling Capability for Generalist Intelligence: [Arxiv](https://arxiv.org/abs/2509.03505)
 - LimiX 技术报告：[LimiX_Technical_Report.pdf](https://github.com/limix-ldm/LimiX/blob/main/LimiX_Technical_Report.pdf)
@@ -477,7 +477,7 @@ reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Fe
 - Balance Comprehensive Challenging Omni-domain 分类基准：[BCCO_cls](https://huggingface.co/datasets/stable-ai/bcco_cls)
 - Balance Comprehensive Challenging Omni-domain 回归基准：[BCCO_reg](https://huggingface.co/datasets/stable-ai/bcco_reg)
 
-# ➤ 许可证
+## ➤ 许可证
 
 本仓库中的代码采用 Stable AI Technology Co., Ltd. License, Version 1.0 (2026年9月) 授权，该许可证衍生自 Apache License, Version 2.0：其中第 1–9 节沿用了 Apache 2.0 的条款与条件，仅对第 1 节中“License”（许可证）的定义进行了修改，以便纳入第 10 节（关于署名及模型命名的附加要求）的规定。第三方代码受其各自的许可证及署名要求约束；详情请参阅 [LICENSE.txt](./LICENSE.txt)。模型权重采用单独的许可证授权：第三方代码遵循其各自的许可与署名要求，详见 [LICENSE.txt](./LICENSE.txt)。模型权重单独授权:
 
@@ -488,7 +488,7 @@ reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Fe
 - LimiX-1-16M: [许可协议](https://huggingface.co/stableai-org/LimiX-1_16M/blob/main/LICENSE)
 
 
-# ➤ 引用
+## ➤ 引用
 ```
 @article{zhang2025limix,
   title={Limix: Unleashing structured-data modeling capability for generalist intelligence},
