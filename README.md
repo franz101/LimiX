@@ -2,7 +2,26 @@
   <img src="./doc/LimiX-Logo.png" alt="LimiX-2" width="105%">
 </div>
 
-## LimiX-2: A Large Foundation Model for Structured Data (LDM)
+<h3 align="center">
+  <b>
+    <span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+    <br/>
+    LimiX-2: A Large Foundation Model for Structured Data (LDM)
+    <br/>
+    <span>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
+    <br/>
+  </b>
+</h3>
+
+<div align="center" style="line-height: 1;">
+  <a href="README_cn.md" target="_blank">中文</a>
+  &nbsp;|
+  English
+  &nbsp;
+</div>
+
+<br/>
+
 [![Project Page](https://img.shields.io/badge/LimiX-Project%20Page-green)](https://www.limix.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
@@ -94,7 +113,7 @@ LimiX-2 also ranks first on both the classification (38 datasets, Table 3) and r
 </div>
 
 <div align="center">
-  <img src="./doc/figures/fig4_tabarena_elo.png" alt="Figure 4: Performance on the TabArena benchmark" width="76%">
+  <img src="./doc/figures/fig4_tabarena_elo.png" alt="Figure 4: Performance on the TabArena benchmark" width="100%">
   <br>
   <sub>Performance on the TabArena benchmark. Baseline results cover default, tuned, and tuned-plus-ensembled configurations; LimiX-2 under the default configuration attains an Elo of 1935, outperforming all compared foundation models and AutoGluon under its noncommercial 4h configuration.</sub>
 </div>
