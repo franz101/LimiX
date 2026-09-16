@@ -492,8 +492,8 @@ For the full example, please check [examples/demo_missing_value_imputation.py](.
 - LimiX Technical Report: [LimiX_Technical_Report.pdf](https://github.com/limix-ldm/LimiX/blob/main/LimiX_Technical_Report.pdf)
 - LimiX-2 Technical Report: [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)
 - Detailed instructions for using Limix: [Visit the official Limix documentation](https://www.limix.ai/doc/)
-- Balance Comprehensive Challenging Omni-domain Classification Benchmark: [BCCO-cls](https://huggingface.co/datasets/stable-ai/bcco_cls)
-- Balance Comprehensive Challenging Omni-domain Regression Benchmark: [BCCO-reg](https://huggingface.co/datasets/stable-ai/bcco_reg)
+- Balanced Comprehensive Challenging Omni-domain Classification Benchmark: [BCCO-cls](https://huggingface.co/datasets/stable-ai/bcco_cls)
+- Balanced Comprehensive Challenging Omni-domain Regression Benchmark: [BCCO-reg](https://huggingface.co/datasets/stable-ai/bcco_reg)
 
 ## 📃 License
 
