@@ -9,7 +9,7 @@
 [![ModelScope](https://img.shields.io/badge/ModelScope-stable--ai-f58c20)](https://modelscope.cn/organization/stable-ai/)
 [![License](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
-# News :boom:
+# :boom: News
 
 - **[2026.09.16] LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [LICENSE.txt](./LICENSE.txt). The LimiX-2 technical report is released as well, see [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
 - **[2026.06.04] Follow-up LimiX research accepted by ICML!**
