@@ -11,14 +11,14 @@
 
 ## 🚀 News
 
-- **[2026.09.16] LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, see [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
-- **[2026.06.04] Follow-up LimiX research accepted by ICML!**
-  Paper: [arXiv:2606.04485](https://arxiv.org/pdf/2606.04485). This work extends the original LimiX (arXiv:2509.03505) structured-data foundation model. [![arXiv-2606.04485](https://img.shields.io/badge/arXiv-2606.04485-b31b1b)](https://arxiv.org/pdf/2606.04485)
-- **[2025.11.10] LimiX-2M lightweight model officially released!**
+- **[16 Sept 2026] LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, see [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
+- **[4 June 2026] Follow-up LimiX research accepted by ICML!**
+  Paper: [![arXiv-2606.04485](https://img.shields.io/badge/arXiv-2606.04485-b31b1b)](https://arxiv.org/abs/2606.04485). This work extends the original LimiX ([![arXiv-2606.04485](https://img.shields.io/badge/arXiv-2606.04485-b31b1b)](https://arxiv.org/abs/2509.03505)) structured-data foundation model. 
+- **[10 Nov 2025] LimiX-2M lightweight model officially released!**
   Compared with LimiX-16M, this lightweight model substantially reduces GPU memory usage and improves inference speed; the retrieval mechanism is also optimized, further improving model quality while reducing inference time and memory overhead.
-- **[2025.09.03] The LimiX paper is available on arXiv.**
+- **[3 Sept 2025] The LimiX paper is available on arXiv.**
   Paper: [arXiv:2509.03505](https://arxiv.org/abs/2509.03505). LimiX is the first structured-data large model for generalist intelligence, and the project is open-sourced under the Apache 2.0 license.
-- **[2025.08.29] LimiX V1.0 officially released.**
+- **[29 Aug 2025] LimiX V1.0 officially released.**
   The first stable official release of the LimiX structured-data foundation model.
 
 
@@ -43,9 +43,9 @@ LimiX-2 is the new-generation model of the LimiX family, developed through model
 
 | Model | Parameters | Release date | Download link | Tasks supported |
 | ----------- | ------------ | ------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
-| LimiX-2 | 400M | 2026-9-16 | [LimiX-2.ckpt](https://huggingface.co/stable-ai/LimiX-2/tree/main) | ✅ cls ✅ reg ✅ imputation |
-| LimiX-1_2M | 2M | 2025-11-10 | [LimiX-1_2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main) | ✅ cls ✅ reg ✅ imputation |
-| LimiX-1_16M | 16M | 2025-8-29 | [LimiX-1_16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ cls ✅ reg ✅ imputation |
+| LimiX-2 | 400M | 16 Sept 2026 | [LimiX-2.ckpt](https://huggingface.co/stable-ai/LimiX-2/tree/main) | ✅ cls ✅ reg ✅ imputation |
+| LimiX-1_2M | 2M | 10 Nov 2025 | [LimiX-1_2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main) | ✅ cls ✅ reg ✅ imputation |
+| LimiX-1_16M | 16M | 29 Aug 2025 | [LimiX-1_16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ cls ✅ reg ✅ imputation |
 
 </div>
 
