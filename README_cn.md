@@ -4,7 +4,7 @@
 
 ## LimiX：面向结构化数据的大型基础模型（LDM）
 [![preprint](https://img.shields.io/static/v1?label=LimiX-2M-论文&message=2606.04485&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2606.04485)
-[![preprint](https://img.shields.io/static/v1?label=LimiX-论文&message=2509.03505&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2509.03505)
+[![preprint](https://img.shields.io/static/v1?label=LimiX-技术报告&message=2509.03505&color=B31B1B&logo=arXiv)](https://arxiv.org/abs/2509.03505)
 [![项目主页](https://img.shields.io/badge/LimiX-项目主页-green)](https://www.limix.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-limiX--ldm%2FLimiX-181717)](https://github.com/limix-ldm/LimiX/)
 [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-stableai--ai-4285F4)](https://huggingface.co/stable-ai/)
