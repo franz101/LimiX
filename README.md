@@ -506,7 +506,7 @@ The code in this repository is licensed under the [Stable AI Technology Co., Ltd
 - LimiX-16M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-16M/blob/main/LICENSE.txt)
 
 ## 📝 Citation
-```
+```bibtex
 @misc{zhang2026limix2contextualmechanismnetwork,
       title={LimiX-2: A Contextual Mechanism Network Towards General Structured-Data Intelligence}, 
       author={Xingxuan Zhang and Gang Ren and Hao Yuan and Hao Zou and Hongze Tan and Hui Wang and Jianhao Song and Jiansheng Li and Jiayao Zhang and Jinghan Zhang and Kaifang Li and Lang Mo and Li Mao and Mingchao Hao and Nuo Xu and Rui Ding and Ruiji Zhang and Shuyang Li and Siyu Mei and Tianyang Zhang and Weiyang Mu and Yancheng Dong and Yongxian Wei and Yuan Xue and Yuanrui Wang and Yue He and Zijia Yang and Ziyun Li and Dongzhe Li and Fuqiang Wang and Jiandong Liu and Jiawei Chen and Jiaxin Du and Kaijie Cheng and Kehan Li and Lei Sun and Linjun Zhou and Ningbo Dai and Qi Wang and Renzhe Xu and Shaoxing Du and Shumeng Yang and Wang Lu and Wenjing Chu and Xiannan Huang and Xiaoyu Lin and Xing Ai and Xinyan Han and Xuanyue Li and Xuanyue Su and Xukun Zhang and Yan Lu and Yaxin Zhang and Yi Qin and Yifei Huang and Yihan Xu and Yongle Lv and Yuanyuan Jiang and Yushan Han and Peng Cui},
