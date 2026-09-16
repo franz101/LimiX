@@ -58,6 +58,8 @@ LimiX-2 is the new-generation model of the LimiX family, developed through model
 
 </div>
 
+<br/>
+
 ## 📈 Benchmark Results
 
 ### ➩ Overall Elo
@@ -210,6 +212,8 @@ The scaling study evaluates LimiX-2 configurations ranging from 12.5M to 406.2M 
   <sub>Parameter scaling on BCCO classification and regression.</sub>
 </div>
 
+<br/>
+
 ## ➤ Tutorials
 
 ### ➩ Installation
@@ -240,6 +244,8 @@ python -m pip install -e .
 ```
 
 This installs `LimiX-infer` and makes `from inference.predictor import LimiXPredictor` / `from limix import LimiXPredictor` work from any working directory. If `torch==2.9.1` was already installed in Step 1, that build is reused.
+
+<br/>
 
 ## ➤ Inference
 
