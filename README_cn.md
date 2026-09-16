@@ -11,7 +11,7 @@
 
 ## :boom: 更新动态
 
-- **[2026.09.16] LimiX-2 开源发布。** LimiX-2 权重（[`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)）与推理代码随本仓库一同发布。单个预训练模型在一次前向传播中即可完成分类、回归、缺失值插补，无需任务专属的参数更新。使用需遵循 [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)。LimiX-2 技术报告正式发布，详见 [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)。
+- **[2026.09.16] LimiX-2 开源发布。** LimiX-2 权重（[`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)）与推理代码随本仓库一同发布。单个预训练模型在一次前向传播中即可完成分类、回归、缺失值插补，无需任务专属的参数更新。使用需遵循 [非商用许可协议](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)。LimiX-2 技术报告正式发布，详见 [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf)。
 - **[2026.06.04] LimiX 后续延伸研究成果被 ICML 会议录用！**
   论文：[arXiv:2606.04485](https://arxiv.org/pdf/2606.04485)，该工作是初代LimiX（arXiv:2509.03505）结构化数据基础模型的拓展研究。[![arXiv-2606.04485](https://img.shields.io/badge/arXiv-2606.04485-b31b1b)](https://arxiv.org/pdf/2606.04485)
 - **[2025.11.10] LimiX-2M 轻量化模型正式发布！**
