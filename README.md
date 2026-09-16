@@ -56,8 +56,8 @@ LimiX-2 is the new-generation model of the LimiX family, developed through model
 | Model | Parameters | Release date | Download link | Tasks supported |
 | ----------- | ------------ | ------------ | ----------------------------------------------------------------------------- | ------------------------------------------------------ |
 | LimiX-2 | 400M | 16 Sept 2026 | [LimiX-2.ckpt](https://huggingface.co/stable-ai/LimiX-2/tree/main) | ✅ cls ✅ reg ✅ imputation |
-| LimiX-1_2M | 2M | 10 Nov 2025 | [LimiX-1_2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main) | ✅ cls ✅ reg ✅ imputation |
-| LimiX-1_16M | 16M | 29 Aug 2025 | [LimiX-1_16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ cls ✅ reg ✅ imputation |
+| LimiX-2M | 2M | 10 Nov 2025 | [LimiX-2M.ckpt](https://huggingface.co/stable-ai/LimiX-1_2M/tree/main) | ✅ cls ✅ reg ✅ imputation |
+| LimiX-16M | 16M | 29 Aug 2025 | [LimiX-16M.ckpt](https://huggingface.co/stable-ai/LimiX-1_16M/tree/main) | ✅ cls ✅ reg ✅ imputation |
 
 </div>
 
