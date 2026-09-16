@@ -11,14 +11,14 @@
 
 ## 🚀 News
 
-- **[16 Sept 2026] LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, see [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
-- **[4 June 2026] Follow-up LimiX research accepted by ICML!**
+- **[16 Sept 2026] 🚀 LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, see [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
+- **[4 June 2026] 🧠 Follow-up LimiX research accepted by ICML!**
   Paper: [LimiX-2M](https://arxiv.org/abs/2606.04485). This work extends the original [LimiX](https://arxiv.org/abs/2509.03505) structured-data foundation model. 
-- **[10 Nov 2025] LimiX-2M lightweight model officially released!**
+- **[10 Nov 2025] 🚀 LimiX-2M lightweight model officially released!**
   Compared with LimiX-16M, this lightweight model substantially reduces GPU memory usage and improves inference speed; the retrieval mechanism is also optimized, further improving model quality while reducing inference time and memory overhead.
-- **[3 Sept 2025] The LimiX paper is available on arXiv.**
+- **[3 Sept 2025] 🧠 The LimiX paper is available on arXiv.**
   Paper: [arXiv:2509.03505](https://arxiv.org/abs/2509.03505). LimiX is the first structured-data large model for generalist intelligence, and the project is open-sourced under the Apache 2.0 license.
-- **[29 Aug 2025] LimiX V1.0 officially released.**
+- **[29 Aug 2025] 🚀 LimiX V1.0 officially released.**
   The first stable official release of the LimiX structured-data foundation model.
 
 
