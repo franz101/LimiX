@@ -46,7 +46,7 @@ LimiX-2 is the new-generation model of the LimiX family, developed through model
   <sub>Synthetic data generation pipeline for pretraining.</sub>
 </div>
 
-### ➤ Available Models
+### Available Models
 
 <div align="center">
 
