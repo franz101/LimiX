@@ -20,7 +20,7 @@
 
 ## 🚀 News
 
-- **[16 Sept 2026] 🚀 LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, see [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
+- **[16 Sept 2026] 🚀 LimiX-2 open-source release.** The LimiX-2 weights ([`LimiX-2.ckpt`](https://huggingface.co/stable-ai/LimiX-2/tree/main)) and inference code are released with this repository. A single pretrained model performs classification, regression and missing-value imputation in one forward pass, without task-specific parameter updates. Usage is subject to [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE). The LimiX-2 technical report is released as well, please check [LimiX_2_Technical_Report.pdf](./LimiX_2_Technical_Report.pdf).
 - **[4 June 2026] 🧠 Follow-up LimiX research accepted by ICML!**
   Paper: [LimiX-2M](https://arxiv.org/abs/2606.04485). This work extends the original [LimiX](https://arxiv.org/abs/2509.03505) structured-data foundation model. 
 - **[10 Nov 2025] 🚀 LimiX-2M lightweight model officially released!**
@@ -222,7 +222,7 @@ Python >= 3.12 is required. Other Python dependencies are installed by `pip inst
 
 #### Step 1 (optional): Install PyTorch and flash-attn
 
-Recommended versions (see `constraints.txt`): `torch==2.9.1`, `torchvision==0.24.1`, `torchaudio==2.9.1`. Install a CUDA-matched build from [pytorch.org](https://pytorch.org), for example:
+Recommended versions (check `constraints.txt`): `torch==2.9.1`, `torchvision==0.24.1`, `torchaudio==2.9.1`. Install a CUDA-matched build from [pytorch.org](https://pytorch.org), for example:
 
 ```bash
 pip install torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1
@@ -255,7 +255,7 @@ LimiX supports classification, regression, and missing-value imputation. The pub
 
 After `pip install -e .`, `LimiX-infer` is the same entry as `python infer.py`. Required flags: `--task_type`, `--data_dir`, `--model_path`. If `--inference_config_path` is omitted, a packaged default config is chosen from the task and checkpoint version (`*_v2.json` for V2.0).
 
-`--data_dir` is a benchmark root: one subdirectory per dataset. See the public [bcco_cls](https://huggingface.co/datasets/stable-ai/bcco_cls) / [bcco_reg](https://huggingface.co/datasets/stable-ai/bcco_reg) layout. Subdirectories without the required CSVs are skipped.
+`--data_dir` is a benchmark root: one subdirectory per dataset. Check the public [bcco_cls](https://huggingface.co/datasets/stable-ai/bcco_cls) / [bcco_reg](https://huggingface.co/datasets/stable-ai/bcco_reg) layout. Subdirectories without the required CSVs are skipped.
 
 ```
 <data_dir>/
@@ -419,7 +419,7 @@ print("roc_auc_score:", roc_auc_score(y_test, prediction[:, 1]))
 print("accuracy_score:", accuracy_score(y_test, np.argmax(prediction, axis=1)))
 ```
 
-For the full example, see [examples/demo_classification.py](./examples/demo_classification.py)
+For the full example, please check [examples/demo_classification.py](./examples/demo_classification.py)
 
 ### ➩ Regression
 
@@ -468,7 +468,7 @@ print(f"RMSE: {rmse}")
 print(f"R2: {r2}")
 ```
 
-For the full example, see [examples/demo_regression.py](./examples/demo_regression.py)
+For the full example, please check [examples/demo_regression.py](./examples/demo_regression.py)
 
 ### ➩ Missing value imputation
 
@@ -481,7 +481,7 @@ model = LimiXPredictor(
 reconstructed_X = model.predict(X_train, y_train, x_test_with_nan, task_type="Feature_imputation")
 ```
 
-For the full example, see [examples/demo_missing_value_imputation.py](./examples/demo_missing_value_imputation.py)
+For the full example, please check [examples/demo_missing_value_imputation.py](./examples/demo_missing_value_imputation.py)
 
 ## ➤ Link
 
@@ -494,7 +494,7 @@ For the full example, see [examples/demo_missing_value_imputation.py](./examples
 
 ## 📃 License
 
-The code in this repository is licensed under the [Stable AI Technology Co., Ltd. License, Version 1.0 (September 2026)](./LICENSE.txt), which is **derived from the Apache License, Version 2.0**: Sections 1–9 reproduce the terms and conditions of Apache 2.0, with the definition of "License" in Section 1 modified solely to incorporate the additional provisions of Section 10 (**Additional Attribution and Model Naming Requirements**). Third-party code is subject to its own licenses and attribution requirements; see [LICENSE.txt](./LICENSE.txt). Model weights are licensed separately:
+The code in this repository is licensed under the [Stable AI Technology Co., Ltd. License, Version 1.0 (September 2026)](./LICENSE.txt), which is **derived from the Apache License, Version 2.0**: Sections 1–9 reproduce the terms and conditions of Apache 2.0, with the definition of "License" in Section 1 modified solely to incorporate the additional provisions of Section 10 (**Additional Attribution and Model Naming Requirements**). Third-party code is subject to its own licenses and attribution requirements; please check [LICENSE.txt](./LICENSE.txt). Model weights are licensed separately:
 
 - LimiX-2: [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)
 - LimiX-1-2M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-1_2M/blob/main/LICENSE)
