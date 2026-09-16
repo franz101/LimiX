@@ -497,10 +497,10 @@ For the full example, see [examples/demo_missing_value_imputation.py](./examples
 The code in this repository is licensed under the [Stable AI Technology Co., Ltd. License, Version 1.0 (September 2026)](./LICENSE.txt), which is **derived from the Apache License, Version 2.0**: Sections 1–9 reproduce the terms and conditions of Apache 2.0, with the definition of "License" in Section 1 modified solely to incorporate the additional provisions of Section 10 (**Additional Attribution and Model Naming Requirements**). Third-party code is subject to its own licenses and attribution requirements; see [LICENSE.txt](./LICENSE.txt). Model weights are licensed separately:
 
 - LimiX-2: [StableAI LimiX Non-Commercial License](https://huggingface.co/stableai-org/LimiX-2/blob/main/LICENSE)
-- LimiX-2M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-2M/blob/main/LICENSE.txt)
-- LimiX-16M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-16M/blob/main/LICENSE.txt)
 - LimiX-1-2M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-1_2M/blob/main/LICENSE)
 - LimiX-1-16M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-1_16M/blob/main/LICENSE)
+- LimiX-2M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-2M/blob/main/LICENSE.txt)
+- LimiX-16M: [Stable AI Technology Co., Ltd. License](https://huggingface.co/stableai-org/LimiX-16M/blob/main/LICENSE.txt)
 
 ## 📝 Citation
 ```
