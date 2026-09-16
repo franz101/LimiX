@@ -10,9 +10,9 @@
 [![License](https://img.shields.io/badge/StableAI-License%20v1.0-green)](./LICENSE.txt)
 
 <div align="center" style="line-height: 1;">
-  <a href="README_cn.md" target="_blank">中文</a>
+  📔 English
   &nbsp;|
-  English
+  <a href="README_cn.md" target="_blank">中文</a>
   &nbsp;
 </div>
 
