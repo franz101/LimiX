@@ -1801,6 +1801,22 @@ class RebalanceFeatureDistribution(BasePreprocess):
         self.svd_runtime_context: dict[str, Any] | None = None
         self.last_svd_diagnostics: dict[str, Any] | None = None
 
+    @staticmethod
+    def _identity_transform(x):
+        return x
+
+    @staticmethod
+    def _nan_to_num_keep_nan(x):
+        return np.nan_to_num(x, nan=np.nan, neginf=np.nan, posinf=np.nan)
+
+    @staticmethod
+    def _shift_by_abs_min(x):
+        return x + np.abs(np.nanmin(x))
+
+    @staticmethod
+    def _add_epsilon(x):
+        return x + 1e-10
+
     def set_svd_runtime_context(self, context: dict[str, Any] | None) -> None:
         """Functionality: Inject this forward's CUDA memory budget so SVD components can be capped before the model runs.
 
@@ -1909,21 +1925,19 @@ class RebalanceFeatureDistribution(BasePreprocess):
                                         ("save_standard", Pipeline(steps=[
                                             ("i2n_pre",
                                              FunctionTransformer(
-                                                 func=lambda x: np.nan_to_num(x, nan=np.nan, neginf=np.nan,
-                                                                              posinf=np.nan),
-                                                 inverse_func=lambda x: x, check_inverse=False)),
+                                                 func=self._nan_to_num_keep_nan,
+                                                 inverse_func=self._identity_transform, check_inverse=False)),
                                             ("fill_missing_pre",
                                              SimpleImputer(missing_values=np.nan, strategy="mean",
                                                            keep_empty_features=True)),
                                             ("feature_shift",
-                                             FunctionTransformer(func=lambda x: x + np.abs(np.nanmin(x)))),
-                                            ("add_epsilon", FunctionTransformer(func=lambda x: x + 1e-10)),
+                                             FunctionTransformer(func=self._shift_by_abs_min)),
+                                            ("add_epsilon", FunctionTransformer(func=self._add_epsilon)),
                                             ("logNormal", FunctionTransformer(np.log, validate=False)),
                                             ("i2n_post",
                                              FunctionTransformer(
-                                                 func=lambda x: np.nan_to_num(x, nan=np.nan, neginf=np.nan,
-                                                                              posinf=np.nan),
-                                                 inverse_func=lambda x: x, check_inverse=False)),
+                                                 func=self._nan_to_num_keep_nan,
+                                                 inverse_func=self._identity_transform, check_inverse=False)),
                                             ("fill_missing_post",
                                              SimpleImputer(missing_values=np.nan, strategy="mean",
                                                            keep_empty_features=True))])),
@@ -1967,15 +1981,15 @@ class RebalanceFeatureDistribution(BasePreprocess):
                                 steps=[
                                     ("power_transformer", RobustPowerTransformer(standardize=True)),
                                     ("inf_to_nan_1", FunctionTransformer(
-                                                        func=lambda x: np.nan_to_num(x, nan=np.nan, neginf=np.nan, posinf=np.nan),
-                                                        inverse_func=lambda x: x,
+                                                        func=self._nan_to_num_keep_nan,
+                                                        inverse_func=self._identity_transform,
                                                         check_inverse=False,
                                                     )),
                                     ("nan_to_mean_1", nan_to_mean_transformer),
                                     ("scaler", SkipAllNaNStandardScaler()),
                                     ("inf_to_nan_2", FunctionTransformer(
-                                                        func=lambda x: np.nan_to_num(x, nan=np.nan, neginf=np.nan, posinf=np.nan),
-                                                        inverse_func=lambda x: x,
+                                                        func=self._nan_to_num_keep_nan,
+                                                        inverse_func=self._identity_transform,
                                                         check_inverse=False,
                                                     )),
                                     ("nan_to_mean_2", nan_to_mean_transformer),
@@ -2033,7 +2047,7 @@ class RebalanceFeatureDistribution(BasePreprocess):
             elif worker_tag=="kdi_uni":
                 sworker = KDIX(alpha=1.0, output_distribution="uniform")
             elif worker_tag is None:
-                sworker = FunctionTransformer(lambda x: x)
+                sworker = FunctionTransformer(self._identity_transform)
             elif worker_tag.startswith("kdi_uni_alpha_"):
                 alpha = float(worker_tag.split("_")[-1])
                 sworker = KDIX(alpha=alpha, output_distribution="uniform")
@@ -2043,7 +2057,7 @@ class RebalanceFeatureDistribution(BasePreprocess):
             elif worker_tag=="kdi_norm":
                 sworker = KDIX(alpha=1.0, output_distribution="normal")
             else:
-                sworker = FunctionTransformer(lambda x: x)
+                sworker = FunctionTransformer(self._identity_transform)
             if worker_tag in ["quantile_uniform_10", "quantile_uniform_5", "quantile_uniform_all_data"]:
                 self.n_quantile_features = len(trans_ixs)
             workers.append((f"feat_transform_{worker_tag}", sworker, trans_ixs))
@@ -2125,13 +2139,13 @@ class RebalanceFeatureDistribution(BasePreprocess):
                 self.worker = worker
                 return worker, dis_ix
             svd_worker = FeatureUnion([
-                    ("default", FunctionTransformer(func=lambda x: x)),
+                    ("default", FunctionTransformer(func=self._identity_transform)),
                     ("svd",Pipeline(steps=[
                                     ("save_standard",Pipeline(steps=[
-                                    ("i2n_pre", FunctionTransformer(func=lambda x: np.nan_to_num(x, nan=np.nan, neginf=np.nan, posinf=np.nan),inverse_func=lambda x: x, check_inverse=False)),
+                                    ("i2n_pre", FunctionTransformer(func=self._nan_to_num_keep_nan,inverse_func=self._identity_transform, check_inverse=False)),
                                     ("fill_missing_pre", SimpleImputer(missing_values=np.nan, strategy="mean", keep_empty_features=True)),
                                     ("standard", SkipAllNaNStandardScaler(with_mean=False)) ,
-                                    ("i2n_post", FunctionTransformer(func=lambda x: np.nan_to_num(x, nan=np.nan, neginf=np.nan, posinf=np.nan),inverse_func=lambda x: x, check_inverse=False)),
+                                    ("i2n_post", FunctionTransformer(func=self._nan_to_num_keep_nan,inverse_func=self._identity_transform, check_inverse=False)),
                                     ("fill_missing_post", SimpleImputer(missing_values=np.nan, strategy="mean", keep_empty_features=True))])),
                                     ("svd",TruncatedSVD(algorithm="arpack",n_components=self.svd_n_comp,random_state=static_seed))]))
                     ])

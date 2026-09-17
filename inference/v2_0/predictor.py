@@ -300,18 +300,23 @@ def _env_flag_enabled(name: str) -> bool:
     raise ValueError(f"{name} must be a boolean flag, got {value!r}")
 
 
-def _frozen_model_cache_key(model_path: str) -> tuple[str, int, int]:
-    """Functionality: Build a process-local cache key from the model file's real path, size, and mtime.
+def _frozen_model_cache_key(
+    model_path: str,
+    deterministic: bool = False,
+) -> tuple[str, int, int, bool]:
+    """Functionality: Build a process-local cache key from the model file's real path, size, mtime, and deterministic flag.
 
     Input:
         model_path: Model checkpoint path.
+        deterministic: Model-build deterministic flag. Templates built with
+            different values are not interchangeable.
 
     Output:
-        tuple[str, int, int]: (realpath, size, mtime_ns).
+        tuple[str, int, int, bool]: (realpath, size, mtime_ns, deterministic).
     """
     resolved_path = os.path.realpath(model_path)
     stat = os.stat(resolved_path)
-    return resolved_path, stat.st_size, stat.st_mtime_ns
+    return resolved_path, stat.st_size, stat.st_mtime_ns, bool(deterministic)
 
 
 def _load_model_for_predictor(
@@ -349,7 +354,7 @@ def _load_model_for_predictor(
     if not reuse_frozen_model:
         return _load_once()
 
-    cache_key = _frozen_model_cache_key(model_path)
+    cache_key = _frozen_model_cache_key(model_path, deterministic)
     with _FROZEN_MODEL_CACHE_LOCK:
         cached = _FROZEN_MODEL_CACHE.get(cache_key)
         if cached is None:
@@ -599,7 +604,7 @@ class LimiXPredictor:
         return state
 
     def __setstate__(self, state):
-        """Functionality: Restore instance fields from pickle state.
+        """Functionality: Restore instance fields from pickle state and re-apply process-global deterministic settings.
 
         Input:
             state: Dict produced by __getstate__.
@@ -608,6 +613,8 @@ class LimiXPredictor:
             None. The model may be rebuilt lazily by _ensure_model_loaded.
         """
         self.__dict__.update(state)
+        if getattr(self, "deterministic", False):
+            set_deterministic(getattr(self, "seed", 0))
 
     def _ensure_model_loaded(self) -> None:
         """Functionality: In frozen-model reuse mode, clone an isolated model from the CPU template when model is missing.
@@ -625,6 +632,7 @@ class LimiXPredictor:
         self.model, _ = _load_model_for_predictor(
             model_path=self.model_path,
             reuse_frozen_model=True,
+            deterministic=getattr(self, "deterministic", False),
         )
 
     def close(self) -> None:
