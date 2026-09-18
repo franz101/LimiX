@@ -221,7 +221,7 @@ LimiX-2 在三大基准上均取得最高 Elo，超越所有对比的基础模�
 
 ### ➩ 安装
 
-需要 Python >= 3.12，其余 Python 依赖通过 `pip install -e .` 安装（包含 `torch==2.9.1`）。`torch` / `flash-attn` 需与本机 CUDA 版本匹配，可在步骤 1（可选）中先行安装。
+需要 Python >= 3.12，其余 Python 依赖通过 `pip install -e .` 安装（包含 `torch>=2.9.1`）。`torch` / `flash-attn` 需与本机 CUDA 版本匹配，可在步骤 1（可选）中先行安装。
 
 #### 步骤 1（可选）：安装 PyTorch 与 flash-attn
 

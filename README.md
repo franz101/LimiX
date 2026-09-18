@@ -221,7 +221,7 @@ The scaling study evaluates LimiX-2 configurations ranging from 12.5M to 406.2M 
 
 ### ➩ Installation
 
-Python >= 3.12 is required. Other Python dependencies are installed by `pip install -e .` (including `torch==2.9.1`). `torch` / `flash-attn` must match your local CUDA; you can install them in Step 1 (optional).
+Python >= 3.12 is required. Other Python dependencies are installed by `pip install -e .` (including `torch>=2.9.1`). `torch` / `flash-attn` must match your local CUDA; you can install them in Step 1 (optional).
 
 #### Step 1 (optional): Install PyTorch and flash-attn
 
