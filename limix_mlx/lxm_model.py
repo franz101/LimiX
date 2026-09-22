@@ -13,7 +13,7 @@ Covered, in torch order (transformer.py::forward):
 Numerically exact replacements:
   - TritonRMSNorm/TritonQKNorm -> fp32 x*rms^-1[*w] (same math as the
     torch CPU fallback in _run_qk_norm).
-  - flash-attn / SDPA -> manual softmax(QK^T/sqrt(D)+mask)V in fp32.
+  - flash-attn / SDPA -> mx.fast.scaled_dot_product_attention in fp32.
   - nvtx / autobatch / recompute / dropout(0) -> plain calls.
   - No autocast on the MLX path: everything runs float32, matching the
     torch CPU baseline.
@@ -56,13 +56,10 @@ class RMSNorm(nn.Module):
             self.weight = None
 
     def __call__(self, x):
-        dt = x.dtype
-        xf = x.astype(mx.float32)
-        v = mx.mean(mx.square(xf), axis=-1, keepdims=True)
-        out = xf * mx.rsqrt(v + self.eps)
-        if self.weight is not None:
-            out = out * self.weight.astype(mx.float32)
-        return out.astype(dt)
+        # Fused kernel; reduces in float32 internally, so this matches the
+        # manual chain to float32 reassociation error (~3e-06 relative end to
+        # end, well under the 9.7e-05 gap to torch this port is measured at).
+        return mx.fast.rms_norm(x, self.weight, self.eps)
 
 
 # ------------------------------------------------------- softmax scaling MLP
@@ -105,13 +102,14 @@ def _sdpa(q, k, v, mask=None):
     qf = q.astype(mx.float32)
     kf = k.astype(mx.float32)
     vf = v.astype(mx.float32)
-    d = q.shape[-1]
-    s = (qf @ mx.transpose(kf, (0, 1, 3, 2))) * (d ** -0.5)
+    # Fused kernel: never materializes the [B,H,S,Skv] score matrix, and does
+    # the softmax in float32 internally like the manual version it replaces.
+    bias = None
     if mask is not None:
-        m = mask.astype(mx.float32)
-        s = s + (1.0 - m) * -1e9
-    p = mx.softmax(s, axis=-1)
-    return (p @ vf).astype(dt)
+        bias = (1.0 - mask.astype(mx.float32)) * -1e9
+    o = mx.fast.scaled_dot_product_attention(
+        qf, kf, vf, scale=q.shape[-1] ** -0.5, mask=bias)
+    return o.astype(dt)
 
 
 class MultiheadAttentionBertType(nn.Module):

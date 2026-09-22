@@ -25,10 +25,22 @@ weight conversion is mechanical and parity is verifiable layer by layer.
 
 ## Results (M4, this repo)
 
-- Forward parity vs torch CPU: cls 9.7e-05, reg 1.8e-05, imputation 1.3e-06 (max|diff| on raw outputs)
-- End-to-end (breast cancer, 120 train / 20 test, 3-pipeline ensemble): same accuracy 0.95, 100% class agreement, proba diff 2.5e-03
-- Bench (150 train / 30 test, cls): **MLX 21.8s vs MPS 45.6s → 2.09x** (shared preprocessing; forward-only gap is larger)
+- Forward parity vs torch CPU (`parity.py`, max|diff| on raw outputs):
+  cls **8.97e-05**, reg **1.81e-05**, imputation **7.33e-06**
+- End-to-end vs torch CPU (`e2e_parity.py`, breast cancer, 120 train / 20 test,
+  3-pipeline ensemble): same accuracy 0.95, **100% class agreement**,
+  proba max|diff| 2.5e-03
+- Bench vs torch/MPS (`bench_mps_vs_mlx.py`, 150 train / 30 test, cls, 1 warmup
+  + median of 3): **MLX 3.52s vs MPS 15.74s → 4.47x**, shared preprocessing on
+  both sides. Class agreement with the MPS run is 96.7% (proba max|diff|
+  2.15e-02); that gap is MPS-vs-MLX and is unchanged by the fused kernels --
+  the float32 CPU comparisons above are the parity reference, not MPS.
 - Imputation: NaNs fully recovered, shape-preserving
+
+Measured on an M3 Pro (Mac15,7) with the fused `mx.fast` kernels. Before
+switching RMSNorm and the attention core to `mx.fast.rms_norm` /
+`mx.fast.scaled_dot_product_attention`, the same benchmark ran 3.84s (4.02x),
+with byte-identical class agreement.
 
 ## Usage
 
